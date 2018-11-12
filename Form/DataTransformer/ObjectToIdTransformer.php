@@ -96,7 +96,7 @@ class ObjectToIdTransformer implements DataTransformerInterface
     public function reverseTransform($id)
     {
         if (!$id) {
-            return null;
+            return $this->multiple ? [] : null;
         }
 
         if (!$this->multiple) {
